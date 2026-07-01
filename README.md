@@ -1,8 +1,9 @@
 # PolarIS CLI
-<img width="226" height="385" alt="Screenshot 2026-06-30 at 8 17 28 PM" src="https://github.com/user-attachments/assets/73023d56-12ef-4d1a-97c7-11de19db625b" />
+polaris_api should be in this directory with in the django repo. 
 
-polaris_api should be in this directory. 
+<img width="307" height="226" alt="Screenshot 2026-06-30 at 8 46 20 PM" src="https://github.com/user-attachments/assets/54de3e30-09ad-4b38-a841-7da67fb9759d" />
 
+*** Where the polaris_api folder is should be the polaris_cli. ***
 ## Running PolarIS
 
 From the project root, run:
