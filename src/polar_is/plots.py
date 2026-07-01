@@ -1,7 +1,8 @@
+import matplotlib.pyplot as plt
 from api.iharp_query_processor import *
 
 from api.iharp_query_processor.src.utils.const import DataRange
-# Dummy data for testing
+
 metadata_fpath = "/Users/Maida/django-react-starter/backend/metadata.csv"
 
 def find_area(data, **kwargs):
@@ -62,8 +63,21 @@ def heatmap(data, **kwargs):
         log_info=None,
         range_info=None
     )
-     
-    return eq.execute()
+
+    result = eq.execute()
+    # Save dataset
+    result.to_netcdf("/home/ismai172/backend/plots/aktemp.nc")
+
+    # Create and save heatmap
+    result["t2m"].plot()
+
+    plt.savefig("/home/ismai172/backend/plots/aktemp_heatmap.png")
+    plt.close()
+
+    print("Saved dataset to /home/ismai172/backend/plots/aktemp.nc")
+    print("Saved heatmap to /home/ismai172/backend/plots/aktemp_heatmap.png")
+
+    return result
 def timeseries(data, **kwargs):
     eq = TimeseriesExecutor(
         variable = data.variable,

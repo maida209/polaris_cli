@@ -1,0 +1,13 @@
+django
+djangorestframework
+django-cors-headers
+xarray
+numpy
+pandas
+netcdf4
+dask[complete]
+plotly
+python-dotenv
+geopandas
+cdsapi
+matplotlib
